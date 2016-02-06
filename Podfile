@@ -7,5 +7,9 @@ target 'ShowTime' do
 
 pod 'AFNetworking', '~> 2.6'
 
+pod 'PKHUD'
+
+pod 'MBProgressHUD'
+
 end
 

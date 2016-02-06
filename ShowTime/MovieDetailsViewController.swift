@@ -11,13 +11,17 @@ import UIKit
 class MovieDetailsViewController: UIViewController {
     @IBOutlet weak var detailsTitleLabel: UILabel!
 
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var detailsOverviewLabel: UILabel!
     @IBOutlet weak var detailsImageView: UIImageView!
     
+    @IBOutlet weak var infoView: UIView!
     var movie : NSDictionary!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        scrollView.contentSize = CGSize(width: scrollView.frame.size.width, height: infoView.frame.origin.y + infoView.frame.size.height )
         
         print(movie)
         
@@ -27,12 +31,18 @@ class MovieDetailsViewController: UIViewController {
         let overview = movie["overview"] as? String
         detailsOverviewLabel.text = overview
         
-        let baseUrl = "https://image.tmdb.org/t/p/w342"
+        detailsOverviewLabel.sizeToFit()
+        
+        
         if let posterpath = movie["poster_path"] as? String
         {
+        let baseUrl = "https://image.tmdb.org/t/p/w342"
         let imageUrl = NSURL(string: baseUrl + posterpath)
-        
-        detailsImageView.setImageWithURL(imageUrl!)
+        detailsImageView.setImageWithURL(imageUrl!, placeholderImage: nil)
+        }
+        else
+        {
+            detailsImageView.image = nil
         }
         // Do any additional setup after loading the view.
     }
