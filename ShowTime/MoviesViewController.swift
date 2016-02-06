@@ -72,14 +72,17 @@ class MoviesViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let cell = tableView.dequeueReusableCellWithIdentifier("com.codepath.movietableviewcell", forIndexPath: indexPath) as! MovieTableViewCell
         
         let baseUrl = "https://image.tmdb.org/t/p/w342"
-        let posterpath = self.movies[indexPath.row]["poster_path"] as? String
         
-        let imageUrl = NSURL(string: baseUrl + posterpath!)
+        if let posterpath = self.movies[indexPath.row]["poster_path"] as? String
+        {
+            let imageUrl = NSURL(string: baseUrl + posterpath)
+            cell.moviesImageView.setImageWithURL(imageUrl!)
+            
+        }
         
         cell.myLabel.text = self.movies[indexPath.row]["title"] as? String
         cell.overviewLabel.text = self.movies[indexPath.row]["overview"] as? String
-        cell.moviesImageView.setImageWithURL(imageUrl!)
-            
+        
        // cell.moviesImageView = self.movies[indexPath.row]["]
        // print (cell.myLabel.text)
         return cell
