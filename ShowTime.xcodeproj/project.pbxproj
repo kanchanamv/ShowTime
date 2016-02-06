@@ -15,6 +15,7 @@
 		844F8BC11C64026A00F81500 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844F8BC01C64026A00F81500 /* Assets.xcassets */; };
 		844F8BC41C64026A00F81500 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844F8BC21C64026A00F81500 /* LaunchScreen.storyboard */; };
 		84C1C36C1C65332C009569F4 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C1C36B1C65332C009569F4 /* MovieDetailsViewController.swift */; };
+		84C1C3701C6699AD009569F4 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 84C1C36F1C6699AD009569F4 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		844F8BC31C64026A00F81500 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		844F8BC51C64026A00F81500 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84C1C36B1C65332C009569F4 /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
+		84C1C36F1C6699AD009569F4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F6C8ED6EC256D55A1009273A /* Pods_ShowTime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShowTime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -64,6 +66,7 @@
 		844F8BAD1C64026A00F81500 = {
 			isa = PBXGroup;
 			children = (
+				84C1C36F1C6699AD009569F4 /* README.md */,
 				844F8BB81C64026A00F81500 /* ShowTime */,
 				844F8BB71C64026A00F81500 /* Products */,
 				3FCEB304C4E306B2B7F20B2D /* Pods */,
@@ -218,6 +221,7 @@
 			files = (
 				84C1C36C1C65332C009569F4 /* MovieDetailsViewController.swift in Sources */,
 				844F8BBC1C64026A00F81500 /* MoviesViewController.swift in Sources */,
+				84C1C3701C6699AD009569F4 /* README.md in Sources */,
 				844F8BBA1C64026A00F81500 /* AppDelegate.swift in Sources */,
 				840B69D61C64123300D35887 /* MovieTableViewCell.swift in Sources */,
 			);
