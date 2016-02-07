@@ -30,6 +30,7 @@ class MoviesViewController: UIViewController, UITableViewDelegate, UITableViewDa
         tableView.dataSource = self
         tableView.delegate = self
         
+        
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: "didRefresh", forControlEvents: .ValueChanged)
         tableView.insertSubview(refreshControl, atIndex: 0)
@@ -102,6 +103,7 @@ class MoviesViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         cell.myLabel.text = self.movies[indexPath.row]["title"] as? String
         cell.overviewLabel.text = self.movies[indexPath.row]["overview"] as? String
+        cell.backgroundColor = UIColor.orangeColor()
         
         if let posterpath = self.movies[indexPath.row]["poster_path"] as? String
         {

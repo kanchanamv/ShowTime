@@ -38,7 +38,37 @@ class MovieDetailsViewController: UIViewController {
         {
         let baseUrl = "https://image.tmdb.org/t/p/w342"
         let imageUrl = NSURL(string: baseUrl + posterpath)
-        detailsImageView.setImageWithURL(imageUrl!, placeholderImage: nil)
+       let imageRequest = NSURLRequest(URL: imageUrl!)
+     //   detailsImageView.setImageWithURL(imageUrl!, placeholderImage: nil)
+            self.detailsImageView.setImageWithURLRequest(
+                imageRequest,
+                placeholderImage: nil,
+                success: { (imageRequest, imageResponse, image) -> Void in
+                    
+                    // imageResponse will be nil if the image is cached
+                    if imageResponse != nil {
+                        print("Image was NOT cached, fade in image")
+                        self.detailsImageView.alpha = 0.0
+                        self.detailsImageView.image = image
+                        UIView.animateWithDuration(0.9, animations: { () -> Void in
+                            self.detailsImageView.alpha = 1.0
+                        })
+                    } else {
+                        print("Image was cached so just update the image")
+                        self.detailsImageView.image = image
+                        
+//                        self.detailsImageView.alpha = 0.0
+//                        self.detailsImageView.image = image
+//                        UIView.animateWithDuration(0.9, animations: { () -> Void in
+//                            self.detailsImageView.alpha = 1.0
+//                        })
+
+                    
+                    }
+                },
+                failure: { (imageRequest, imageResponse, error) -> Void in
+                    // do something for the failure condition
+            })
         }
         else
         {
