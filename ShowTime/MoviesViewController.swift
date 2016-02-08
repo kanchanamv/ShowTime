@@ -103,7 +103,7 @@ class MoviesViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         cell.myLabel.text = self.movies[indexPath.row]["title"] as? String
         cell.overviewLabel.text = self.movies[indexPath.row]["overview"] as? String
-        cell.backgroundColor = UIColor.orangeColor()
+        cell.backgroundColor = UIColor.grayColor()
         
         if let posterpath = self.movies[indexPath.row]["poster_path"] as? String
         {

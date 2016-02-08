@@ -15,6 +15,11 @@ class MovieTableViewCell: UITableViewCell {
     @IBOutlet weak var moviesImageView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        let selectionView = UIView()
+        selectionView.backgroundColor = UIColor.darkGrayColor()
+        UITableViewCell.appearance().selectedBackgroundView = selectionView
+
         // Initialization code
     }
 
