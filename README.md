@@ -33,7 +33,7 @@ The following **additional** features are implemented:
 Here's a walkthrough of implemented user stories:
 
 # Required and Optional User Stories Walkthrough:
-![Video Walkthrough] (ShowTime Video Walkthrough.gif)
+<img src='/Users/new/Documents/ShowTime Video Walkthrough.gif' title='ShowTime Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
